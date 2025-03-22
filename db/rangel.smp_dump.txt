@@ -1,0 +1,19 @@
+
+State Machine - |rangel|estado
+Name estado.Q15 estado.Q14 estado.Q13 estado.Q12 estado.Q11 estado.Q10 estado.Q9 estado.Q8 estado.Q7 estado.Q6 estado.Q5 estado.Q4 estado.Q3 estado.Q2 estado.Q1 estado.Q0 
+estado.Q0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+estado.Q1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+estado.Q2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+estado.Q3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+estado.Q4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+estado.Q5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+estado.Q6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+estado.Q7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+estado.Q8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+estado.Q9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+estado.Q10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+estado.Q11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+estado.Q12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.Q13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.Q14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.Q15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

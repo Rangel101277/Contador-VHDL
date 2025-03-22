@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Universidade Uninter\Lógica programável\Trabalho\Rangel\simulation\qsim
+vrangel
+Z1 !s100 OIgl>[[j1;hnJUCb^FJc[2
+Z2 IR3EKJGHnG<4QRL:6n3;8:2
+Z3 V=_MU3:kgBblJeb6BN;<WD0
+Z4 dD:\Universidade Uninter\Lógica programável\Trabalho\Rangel\simulation\qsim
+Z5 w1742654188
+Z6 8rangel.vo
+Z7 Frangel.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|rangel.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1742654191.001000
+Z12 !s107 rangel.vo|
+!s101 -O0
+vrangel_vlg_check_tst
+!i10b 1
+Z13 !s100 bF;>GjggD@QIn9J0_Yo0^1
+Z14 IVfFd1FS_3<4P;bc6:1hTM0
+Z15 VQj>_E;VdCB]3HbLdafiOR2
+R4
+Z16 w1742654186
+Z17 8rangel.vt
+Z18 Frangel.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1742654193.668000
+Z20 !s107 rangel.vt|
+Z21 !s90 -work|work|rangel.vt|
+!s101 -O0
+R10
+vrangel_vlg_sample_tst
+!i10b 1
+Z22 !s100 ``Fjncz5VP0>fL6^dQF5=3
+Z23 I2VVAgTjOd^^iDA9k2=:f<3
+Z24 Vm3KGB@in;J=H8YlYS[Hgf1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vrangel_vlg_vec_tst
+!i10b 1
+Z25 !s100 55PJJi:eh]zfPY0Q4Y0fN2
+Z26 I]Xk]DOmYH13R4HKW6?CO11
+Z27 VGeQeaIbYToKDdnk9;T2?00
+R4
+R16
+R17
+R18
+Z28 L0 237
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

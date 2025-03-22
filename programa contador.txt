@@ -1,0 +1,228 @@
+-- Professor Thiago
+-- RU: 4150178
+-- Data: 22/03/2025
+-- Exemplo de codiigo e analises
+
+library IEEE;  -- utilizacao da biblioteca
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity rangel is -- Configuracao de entradas e saidas
+	Port (
+		reset: in std_logic;
+		ck: in std_logic;
+		E0: in std_logic;
+		S3: out std_logic;
+		S2: out std_logic;
+		S1: out std_logic;
+		S0: out std_logic
+		);
+end rangel;
+
+architecture comportamento of rangel is  -- arquitetura do codigo VHDL
+
+type nomes_estados is (Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15); -- Definicao dos estados das saidas
+signal estado: nomes_estados;
+signal entrada_aux: std_logic; --Entrada auxiliar para definir se o contador sera crescente ou decrescente
+
+begin
+
+entrada_aux<=E0; --Entrada auxiliar resebera o sinal de E0 ('0' ou '1')
+
+process(reset, ck)
+begin
+if reset='0' and entrada_aux= '1' then -- saida sera Q0 quando reset em '0' e E0 em '1'
+	estado<=Q0;
+	elsif reset='0' and entrada_aux= '0' then -- saida sera Q15 quando reset em '0' e E0 em '0'
+	estado<=Q15;
+	
+elsif ck='1' and ck'event then -- Mudanca de estado na borda de subida de clock
+	case estado is -- Configuracao dos estados das saidas em funcao da entrada E0
+		when Q0 => -- Programacao de estado da saida Q0
+			case entrada_aux is
+				when '0' => estado<=Q15;
+				when '1' => estado<=Q1;
+				when others => estado<=Q0;
+			end case;
+		when Q1 => -- Programacao de estado da saida Q1
+			case entrada_aux is
+				when '0' => estado<=Q0;
+				when '1' => estado<=Q2;
+				when others => estado<=Q0;
+			end case;
+		when Q2 => -- Programacao de estado da saidaa Q2
+			case entrada_aux is
+				when '0' => estado<=Q1;
+				when '1' => estado<=Q3;
+				when others => estado<=Q0;
+			end case;
+		when Q3 => -- Programacao de estado da saida Q3
+			case entrada_aux is
+				when '0' => estado<=Q2;
+				when '1' => estado<=Q4;
+				when others => estado<=Q0;
+			end case;
+		when Q4 => -- Programacao de estado da saida Q4
+			case entrada_aux is
+				when '0' => estado<=Q3;
+				when '1' => estado<=Q5;
+				when others => estado<=Q0;
+			end case;
+		when Q5 => -- Programacao de estado da saida Q5
+			case entrada_aux is
+				when '0' => estado<=Q4;
+				when '1' => estado<=Q6;
+				when others => estado<=Q0;
+			end case;
+		when Q6 => -- Programacao de estado da saida Q6
+			case entrada_aux is
+				when '0' => estado<=Q5;
+				when '1' => estado<=Q7;
+				when others => estado<=Q0;
+			end case;
+		when Q7 => -- Programacao de estado da saida Q7
+			case entrada_aux is
+				when '0' => estado<=Q6;
+				when '1' => estado<=Q8;
+				when others => estado<=Q0;
+			end case;
+		when Q8 => -- Programacao de estado da saida Q8
+			case entrada_aux is
+				when '0' => estado<=Q7;
+				when '1' => estado<=Q9;
+				when others => estado<=Q0;
+			end case;
+		when Q9 => -- Programacao de estado da saida Q9
+			case entrada_aux is
+				when '0' => estado<=Q8;
+				when '1' => estado<=Q10;
+				when others => estado<=Q0;
+			end case;
+		when Q10 => -- Programacao de estado da saida Q10
+			case entrada_aux is
+				when '0' => estado<=Q9;
+				when '1' => estado<=Q11;
+				when others => estado<=Q0;
+			end case;
+		when Q11 => -- Programacao de estado da saida Q11
+			case entrada_aux is
+				when '0' => estado<=Q10;
+				when '1' => estado<=Q12;
+				when others => estado<=Q0;
+			end case;
+		when Q12 => -- Programacao de estado da saida Q12
+			case entrada_aux is
+				when '0' => estado<=Q11;
+				when '1' => estado<=Q13;
+				when others => estado<=Q0;
+			end case;
+		when Q13 => -- Programacao de estado da saida Q13
+			case entrada_aux is
+				when '0' => estado<=Q12;
+				when '1' => estado<=Q14;
+				when others => estado<=Q0;
+			end case;
+		when Q14 => -- Programacao de estado da saida Q14
+			case entrada_aux is
+				when '0' => estado<=Q13;
+				when '1' => estado<=Q15;
+				when others => estado<=Q0;
+			end case;
+		when Q15 => -- Programacao de estado da saida Q15
+			case entrada_aux is
+				when '0' => estado<=Q14;
+				when '1' => estado<=Q0;
+				when others => estado<=Q0;
+			end case;
+		when others => estado<=Q0;
+	end case;
+end if;
+end process;
+
+process(estado)
+begin
+case estado is -- mudanca dos estados das saidas a cada ciclo de clock
+	when Q0 =>
+		S0<='1';
+		S1<='1';
+		S2<='1';
+		S3<='1';
+	when Q1 =>
+		S0<='0';
+		S1<='1';
+		S2<='1';
+		S3<='1';
+	when Q2 =>
+		S0<='1';
+		S1<='0';
+		S2<='1';
+		S3<='1';
+	when Q3 =>
+		S0<='0';
+		S1<='0';
+		S2<='1';
+		S3<='1';
+	when Q4 =>
+		S0<='1';
+		S1<='1';
+		S2<='0';
+		S3<='1';
+	when Q5 =>
+		S0<='0';
+		S1<='1';
+		S2<='0';
+		S3<='1';
+	when Q6 =>
+		S0<='1';
+		S1<='0';
+		S2<='0';
+		S3<='1';
+	when Q7 =>
+		S0<='0';
+		S1<='0';
+		S2<='0';
+		S3<='1';
+	when Q8 =>
+		S0<='1';
+		S1<='1';
+		S2<='1';
+		S3<='0';
+	when Q9 =>
+		S0<='0';
+		S1<='1';
+		S2<='1';
+		S3<='0';
+	when Q10 =>
+		S0<='1';
+		S1<='0';
+		S2<='1';
+		S3<='0';
+	when Q11 =>
+		S0<='0';
+		S1<='0';
+		S2<='1';
+		S3<='0';
+	when Q12 =>
+		S0<='1';
+		S1<='1';
+		S2<='0';
+		S3<='0';
+	when Q13 =>
+		S0<='0';
+		S1<='1';
+		S2<='0';
+		S3<='0';
+	when Q14 =>
+		S0<='1';
+		S1<='0';
+		S2<='0';
+		S3<='0';
+	when Q15 =>
+		S0<='0';
+		S1<='0';
+		S2<='0';
+		S3<='0';
+end case;
+end process;
+
+end comportamento;

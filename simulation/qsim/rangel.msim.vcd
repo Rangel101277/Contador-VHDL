@@ -1,0 +1,585 @@
+$comment
+	File created using the following command:
+		vcd file rangel.msim.vcd -direction
+$end
+$date
+	Sat Mar 22 11:36:37 2025
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module rangel_vlg_vec_tst $end
+$var reg 1 ! ck $end
+$var reg 1 " E0 $end
+$var reg 1 # reset $end
+$var wire 1 $ S0 $end
+$var wire 1 % S1 $end
+$var wire 1 & S2 $end
+$var wire 1 ' S3 $end
+$var wire 1 ( sampler $end
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / ck~combout $end
+$var wire 1 0 ck~clkctrl_outclk $end
+$var wire 1 1 E0~combout $end
+$var wire 1 2 Selector15~0_combout $end
+$var wire 1 3 reset~combout $end
+$var wire 1 4 reset~clkctrl_outclk $end
+$var wire 1 5 estado.Q15~regout $end
+$var wire 1 6 Selector14~0_combout $end
+$var wire 1 7 estado.Q14~regout $end
+$var wire 1 8 Selector13~0_combout $end
+$var wire 1 9 estado.Q13~regout $end
+$var wire 1 : Selector12~0_combout $end
+$var wire 1 ; estado.Q12~regout $end
+$var wire 1 < Selector11~0_combout $end
+$var wire 1 = estado.Q11~regout $end
+$var wire 1 > Selector10~0_combout $end
+$var wire 1 ? estado.Q10~regout $end
+$var wire 1 @ Selector9~0_combout $end
+$var wire 1 A estado.Q9~regout $end
+$var wire 1 B Selector8~0_combout $end
+$var wire 1 C estado.Q8~regout $end
+$var wire 1 D Selector7~0_combout $end
+$var wire 1 E estado.Q7~regout $end
+$var wire 1 F Selector6~0_combout $end
+$var wire 1 G estado.Q6~regout $end
+$var wire 1 H Selector5~0_combout $end
+$var wire 1 I estado.Q5~regout $end
+$var wire 1 J Selector4~0_combout $end
+$var wire 1 K estado.Q4~regout $end
+$var wire 1 L Selector3~0_combout $end
+$var wire 1 M estado.Q3~regout $end
+$var wire 1 N Selector2~0_combout $end
+$var wire 1 O estado.Q2~regout $end
+$var wire 1 P Selector1~0_combout $end
+$var wire 1 Q estado.Q1~regout $end
+$var wire 1 R Selector0~0_combout $end
+$var wire 1 S estado.Q0~regout $end
+$var wire 1 T WideOr16~0_combout $end
+$var wire 1 U WideOr19~0_combout $end
+$var wire 1 V WideOr19~combout $end
+$var wire 1 W WideOr18~0_combout $end
+$var wire 1 X WideOr17~0_combout $end
+$var wire 1 Y WideOr18~combout $end
+$var wire 1 Z WideOr17~1_combout $end
+$var wire 1 [ WideOr17~combout $end
+$var wire 1 \ WideOr16~1_combout $end
+$var wire 1 ] WideOr16~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+1$
+1%
+1&
+1'
+x(
+0)
+1*
+x+
+1,
+1-
+1.
+0/
+00
+11
+02
+13
+14
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+1P
+0Q
+1R
+0S
+0T
+0U
+1V
+0W
+0X
+1Y
+0Z
+1[
+0\
+1]
+$end
+#195000
+1!
+1/
+10
+0(
+#210000
+0!
+0/
+00
+1(
+1Q
+1S
+1U
+1N
+1T
+0P
+0]
+0$
+#225000
+1!
+1/
+10
+0(
+#240000
+0!
+0/
+00
+1(
+1O
+0Q
+1W
+0T
+1L
+1X
+0U
+0N
+1]
+0[
+1$
+0%
+#255000
+1!
+1/
+10
+0(
+#270000
+0!
+0/
+00
+1(
+1M
+0O
+1U
+1J
+1T
+0L
+0]
+0$
+#285000
+1!
+1/
+10
+0(
+#300000
+0!
+0/
+00
+1(
+1K
+0M
+1Z
+0T
+1H
+0W
+0U
+0J
+1[
+1]
+0Y
+1%
+1$
+0&
+#315000
+1!
+1/
+10
+0(
+#330000
+0!
+0/
+00
+1(
+1I
+0K
+1U
+1F
+1T
+0H
+0]
+0$
+#345000
+1!
+1/
+10
+0(
+#360000
+0!
+0/
+00
+1(
+1G
+0I
+0T
+1D
+0Z
+0U
+0F
+1]
+0[
+1$
+0%
+#375000
+1!
+1/
+10
+0(
+#390000
+0!
+0/
+00
+1(
+1E
+0G
+1U
+1B
+1T
+0D
+0]
+0$
+#405000
+1!
+1/
+10
+0(
+#420000
+0!
+0/
+00
+1(
+1C
+0E
+1\
+0X
+1@
+0U
+0B
+1]
+1[
+1Y
+0V
+1$
+1%
+1&
+0'
+#435000
+1!
+1/
+10
+0(
+#450000
+0!
+0/
+00
+1(
+1A
+0C
+1>
+0\
+0@
+0]
+0$
+#465000
+1!
+1/
+10
+0(
+#480000
+0!
+0/
+00
+1(
+1?
+0A
+1\
+1W
+1<
+1X
+0>
+1]
+0[
+1$
+0%
+#495000
+1!
+1/
+10
+0(
+#510000
+0!
+0/
+00
+1(
+1=
+0?
+1:
+0\
+0<
+0]
+0$
+#525000
+1!
+1/
+10
+0(
+#540000
+0!
+0/
+00
+1(
+1;
+0=
+1\
+1Z
+18
+0W
+0:
+1]
+1[
+0Y
+1$
+1%
+0&
+#555000
+1!
+1/
+10
+0(
+#570000
+0!
+0/
+00
+1(
+19
+0;
+16
+0\
+08
+0]
+0$
+#585000
+1!
+1/
+10
+0(
+#600000
+0!
+0/
+00
+1(
+17
+09
+1\
+12
+0Z
+06
+1]
+0[
+1$
+0%
+#615000
+1!
+1/
+10
+0(
+#630000
+0!
+0/
+00
+1(
+15
+07
+0R
+0\
+02
+0]
+0$
+#645000
+1!
+1/
+10
+0(
+#660000
+0!
+0/
+00
+1(
+05
+0S
+1R
+0X
+0T
+1P
+1[
+1Y
+1]
+1V
+1%
+1&
+1$
+1'
+#675000
+1!
+1/
+10
+0(
+#690000
+0!
+0/
+00
+1(
+1Q
+1S
+1U
+1N
+1T
+0P
+0]
+0$
+#705000
+1!
+1/
+10
+0(
+#720000
+0!
+0/
+00
+1(
+1O
+0Q
+1W
+0T
+1L
+1X
+0U
+0N
+1]
+0[
+1$
+0%
+#735000
+1!
+1/
+10
+0(
+#750000
+0!
+0/
+00
+1(
+1M
+0O
+1U
+1J
+1T
+0L
+0]
+0$
+#765000
+1!
+1/
+10
+0(
+#780000
+0!
+0/
+00
+1(
+1K
+0M
+1Z
+0T
+1H
+0W
+0U
+0J
+1[
+1]
+0Y
+1%
+1$
+0&
+#795000
+1!
+1/
+10
+0(
+#810000
+0!
+0/
+00
+1(
+1I
+0K
+1U
+1F
+1T
+0H
+0]
+0$
+#825000
+1!
+1/
+10
+0(
+#840000
+0!
+0/
+00
+1(
+1G
+0I
+0T
+1D
+0Z
+0U
+0F
+1]
+0[
+1$
+0%
+#1000000

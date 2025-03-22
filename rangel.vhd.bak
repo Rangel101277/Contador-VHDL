@@ -1,0 +1,221 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity rangel is
+	Port (
+		reset: in std_logic;
+		ck: in std_logic;
+		E0: in std_logic;
+		S0: out std_logic;
+		S1: out std_logic;
+		S2: out std_logic;
+		S3: out std_logic
+		);
+end rangel;
+
+architecture behavioral of rangel is
+
+type nombres_estados is (Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15);
+signal estado: nombres_estados;
+signal entrada_aux: std_logic;
+
+begin
+
+entrada_aux<=E0;
+
+process(reset, ck)
+begin
+if inicio='1' then
+	estado<=Q0;
+elsif ck='1' and ck'event then
+	case estado is
+		when Q0 =>
+			case entrada_aux is
+				when '0' => estado<=Q15;
+				when '1' => estado<=Q1;
+				when others => estado<=Q0;
+			end case;
+		when Q1 =>
+			case entrada_aux is
+				when '0' => estado<=Q0;
+				when '1' => estado<=Q2;
+				when others => estado<=Q0;
+			end case;
+		when Q2 =>
+			case entrada_aux is
+				when '0' => estado<=Q1;
+				when '1' => estado<=Q3;
+				when others => estado<=Q0;
+			end case;
+		when Q3 =>
+			case entrada_aux is
+				when '0' => estado<=Q2;
+				when '1' => estado<=Q4;
+				when others => estado<=Q0;
+			end case;
+		when Q4 =>
+			case entrada_aux is
+				when '0' => estado<=Q3;
+				when '1' => estado<=Q5;
+				when others => estado<=Q0;
+			end case;
+		when Q5 =>
+			case entrada_aux is
+				when '0' => estado<=Q4;
+				when '1' => estado<=Q6;
+				when others => estado<=Q0;
+			end case;
+		when Q6 =>
+			case entrada_aux is
+				when '0' => estado<=Q5;
+				when '1' => estado<=Q7;
+				when others => estado<=Q0;
+			end case;
+		when Q7 =>
+			case entrada_aux is
+				when '0' => estado<=Q6;
+				when '1' => estado<=Q8;
+				when others => estado<=Q0;
+			end case;
+		when Q8 =>
+			case entrada_aux is
+				when '0' => estado<=Q7;
+				when '1' => estado<=Q9;
+				when others => estado<=Q0;
+			end case;
+		when Q9 =>
+			case entrada_aux is
+				when '0' => estado<=Q8;
+				when '1' => estado<=Q10;
+				when others => estado<=Q0;
+			end case;
+		when Q10 =>
+			case entrada_aux is
+				when '0' => estado<=Q9;
+				when '1' => estado<=Q11;
+				when others => estado<=Q0;
+			end case;
+		when Q11 =>
+			case entrada_aux is
+				when '0' => estado<=Q10;
+				when '1' => estado<=Q12;
+				when others => estado<=Q0;
+			end case;
+		when Q12 =>
+			case entrada_aux is
+				when '0' => estado<=Q11;
+				when '1' => estado<=Q13;
+				when others => estado<=Q0;
+			end case;
+		when Q13 =>
+			case entrada_aux is
+				when '0' => estado<=Q12;
+				when '1' => estado<=Q14;
+				when others => estado<=Q0;
+			end case;
+		when Q14 =>
+			case entrada_aux is
+				when '0' => estado<=Q13;
+				when '1' => estado<=Q15;
+				when others => estado<=Q0;
+			end case;
+		when Q15 =>
+			case entrada_aux is
+				when '0' => estado<=Q14;
+				when '1' => estado<=Q0;
+				when others => estado<=Q0;
+			end case;
+		when others => estado<=Q0;
+	end case;
+end if;
+end process;
+
+process(estado)
+begin
+case estado is
+	when Q0 =>
+		S0<='1';
+		S1<='1';
+		S2<='1';
+		S3<='1';
+	when Q1 =>
+		S0<='0';
+		S1<='1';
+		S2<='1';
+		S3<='1';
+	when Q2 =>
+		S0<='1';
+		S1<='0';
+		S2<='1';
+		S3<='1';
+	when Q3 =>
+		S0<='0';
+		S1<='0';
+		S2<='1';
+		S3<='1';
+	when Q4 =>
+		S0<='1';
+		S1<='1';
+		S2<='0';
+		S3<='1';
+	when Q5 =>
+		S0<='0';
+		S1<='1';
+		S2<='0';
+		S3<='1';
+	when Q6 =>
+		S0<='1';
+		S1<='0';
+		S2<='0';
+		S3<='1';
+	when Q7 =>
+		S0<='0';
+		S1<='0';
+		S2<='0';
+		S3<='1';
+	when Q8 =>
+		S0<='1';
+		S1<='1';
+		S2<='1';
+		S3<='0';
+	when Q9 =>
+		S0<='0';
+		S1<='1';
+		S2<='1';
+		S3<='0';
+	when Q10 =>
+		S0<='1';
+		S1<='0';
+		S2<='1';
+		S3<='0';
+	when Q11 =>
+		S0<='0';
+		S1<='0';
+		S2<='1';
+		S3<='0';
+	when Q12 =>
+		S0<='1';
+		S1<='1';
+		S2<='0';
+		S3<='0';
+	when Q13 =>
+		S0<='0';
+		S1<='1';
+		S2<='0';
+		S3<='0';
+	when Q14 =>
+		S0<='1';
+		S1<='0';
+		S2<='0';
+		S3<='0';
+	when Q15 =>
+		S0<='0';
+		S1<='0';
+		S2<='0';
+		S3<='0';
+end case;
+end process;
+
+end behavioral;
